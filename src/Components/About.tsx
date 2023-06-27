@@ -166,6 +166,10 @@ const StyledDiv = styled.div`
     transition: opacity 0.2s ease;
     font-weight: 700;
 
+    i {
+      font-size: 1.5rem;
+    }
+
     &:hover {
       opacity: 0.8;
     }

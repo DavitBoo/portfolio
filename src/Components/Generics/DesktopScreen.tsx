@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-import desktop from "../../assets/twitter-desktop.png";
+// import desktop from "../../assets/twitter-desktop.png";
 
 const translateAnimation = keyframes`
   from {
@@ -23,13 +23,13 @@ const StyledDiv = styled.div`
     border-radius: 5px;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: 25px; /* Ajusta el margen superior según tus necesidades */
+    margin-top: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
   .browser-toolbar {
     width: 100%;
-    height: 11%;
+    height: 8%;
     background-color: #eee;
     background-image: linear-gradient(to bottom, #ddd, #eee);
     border-bottom: 1px solid #ccc;
@@ -65,20 +65,22 @@ const StyledDiv = styled.div`
 
   .screen {
     width: 100%;
-    height: calc(100% - 11%); /* Resta la altura de la barra de herramientas */
+    height: calc(100% - 8%); /* Resta la altura de la barra de herramientas */
     background-color: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    overflow: hidden;
   }
 
   .screen img {
     max-width: 100%;
     max-height: 100%;
+    object-fit: cover;
   }
 `;
 
-export default function DesktopScreen() {
+export default function DesktopScreen({ desktop }: any) {
   return (
     <StyledDiv>
       <div className="desktop">

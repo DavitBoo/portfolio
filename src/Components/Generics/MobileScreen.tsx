@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-import mobile from "../../assets/twitter-mobile.png";
+// import mobile from "../../assets/twitter-mobile.png";
 
 const rotateAnimation = keyframes`
   from {
@@ -61,7 +61,7 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function MobileScreen() {
+export default function MobileScreen({ mobile }: any) {
   return (
     <StyledDiv>
       <div className="mobile">

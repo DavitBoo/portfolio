@@ -30,25 +30,23 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function ProjectLeft() {
+export default function ProjectLeft({
+  title,
+  description,
+  technologies,
+  url,
+}: any) {
   return (
     <StyledDiv>
-      <h3>Twitter Clone</h3>
+      <h3>{title}</h3>
       <div className="technologies">
         <i className="firebase devicon-firebase-plain"></i>
         <i className="react devicon-react-original"></i>
         <i className="typescript devicon-typescript-plain"></i>
       </div>
 
-      <p>
-        La idea era hacer un clone de twitter que tuviese las funcionalidades
-        principales de la red social: escribir y publicar posts, seguir a gente
-        y que te sigan, editar tu perfil, dar al like a post de los demaa... con
-        intención poner en práctica casi todo lo aprendido hasta ahora en
-        conjunto. Sobre la marcha se me fueron ocurriendo algunas cosas que
-        podía añadirle, y este es el resultado.
-      </p>
-      <a href="">Ver sitio</a>
+      <p>{description}</p>
+      <a href={url}>Ver sitio</a>
     </StyledDiv>
   );
 }

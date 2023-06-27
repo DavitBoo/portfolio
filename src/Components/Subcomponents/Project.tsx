@@ -8,11 +8,31 @@ const StyledDiv = styled.div`
   /* flex-wrap: wrap; */
 `;
 
-export default function Project() {
+interface ProjectProps {
+  project: {
+    title: string;
+    description: string;
+    desktop: string;
+    mobile: string;
+    technologies: string[];
+    url: string;
+    responsive: boolean;
+  };
+}
+
+export default function Project({ project }: ProjectProps) {
+  const { title, description, desktop, mobile, technologies, url, responsive } =
+    project;
+
   return (
     <StyledDiv>
-      <ProjectLeft></ProjectLeft>
-      <ProjectRight></ProjectRight>
+      <ProjectLeft
+        title={title}
+        description={description}
+        technologies={technologies}
+        url={url}
+      />
+      <ProjectRight mobile={mobile} desktop={desktop} responsive={responsive} />
     </StyledDiv>
   );
 }

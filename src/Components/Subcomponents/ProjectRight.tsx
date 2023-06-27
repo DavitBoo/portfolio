@@ -10,11 +10,11 @@ const StyledDiv = styled.div`
   align-items: center;
 `;
 
-export default function ProjectRight() {
+export default function ProjectRight({ desktop, mobile, responsive }: any) {
   return (
     <StyledDiv>
-      <DesktopScreen />
-      <MobileScreen />
+      <DesktopScreen desktop={desktop} />
+      {responsive && <MobileScreen mobile={mobile} />}
     </StyledDiv>
   );
 }

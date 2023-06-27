@@ -2,10 +2,13 @@ import React from "react";
 import Project from "./Subcomponents/Project";
 import styled from "styled-components";
 
+import projects from "../data/projects.ts";
+
 const StyledDiv = styled.div`
   display: flex;
   max-width: 980px;
   flex-direction: column;
+  gap: 5rem;
 
   h2 {
     font-size: 2.2rem;
@@ -35,8 +38,9 @@ export default function Projects() {
         </option>
         <option value="value3">JavaScript</option>
       </select>
-      <Project />
-      <Project />
+      {projects.map((project, index) => (
+        <Project key={index} project={project} />
+      ))}
     </StyledDiv>
   );
 }
