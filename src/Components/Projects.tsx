@@ -36,6 +36,7 @@ export default function Projects() {
         <option value="value3">JavaScript</option>
       </select>
       <Project />
+      <Project />
     </StyledDiv>
   );
 }

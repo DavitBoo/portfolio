@@ -69,7 +69,7 @@ const StyledDiv = styled.div`
       filter: drop-shadow(0px 0px 2px var(--color-git));
 
       &::after {
-        background-color: var(---color-git);
+        background-color: var(--color-git);
       }
 
       &:hover::after {
