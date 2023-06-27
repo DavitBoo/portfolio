@@ -5,6 +5,8 @@ import profile from "../assets/profile.jpg";
 
 const StyledDiv = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Indie+Flower&display=swap");
+  /* height: 100vh; */
+
   .header-content {
     max-width: 980px;
     padding-right: 25%;
@@ -50,7 +52,7 @@ export default function Header() {
           uno de los motivos por los que decidí centrar mi tiempo y mis ganas en
           aprender desarrollo web y programación.
         </p>
-        <img src={profile} alt="" />
+        {/* <img src={profile} alt="" /> */}
         <p>
           Cuando no estoy programando suelo hacer otras cosas, viajo, toco la
           guitarra, voy al monte o a la playa, entreno calistenia, construyo

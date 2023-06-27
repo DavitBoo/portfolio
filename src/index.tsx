@@ -46,6 +46,17 @@ p, h1, h2, h3, h4, h5, h6 {
   --color-gris-acero: #808080;
   --color-texto: #383838;
   --color-blanco-puro: #FFFFFF;
+
+  --color-css: hsl(204, 55%, 51%);
+  --color-firebase: hsl(28, 91%, 55%);
+  --color-git: hsl(11, 89%, 56%);
+  --color-html: hsl(12, 78%, 53%);
+  --color-js: hsl(52, 84%, 63%);
+  --color-react: hsl(193, 95%, 68%);
+  --color-ts: hsl(204, 100%, 40%);
+  --color-webpack: hsl(206, 75%, 43%);
+  --color-wordpress: hsl(0, 0%, 29%);
+
 }
 
 body{
