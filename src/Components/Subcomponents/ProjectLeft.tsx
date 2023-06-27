@@ -30,19 +30,25 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function ProjectLeft({
-  title,
-  description,
-  technologies,
-  url,
-}: any) {
+export default function ProjectLeft({ title, description, technologies, url }: any) {
+  const usedTech = (usedClass: string) => {
+    return technologies.some((className: string) => usedClass === className);
+  };
+
   return (
     <StyledDiv>
       <h3>{title}</h3>
       <div className="technologies">
-        <i className="firebase devicon-firebase-plain"></i>
-        <i className="react devicon-react-original"></i>
-        <i className="typescript devicon-typescript-plain"></i>
+        {usedTech("HTML") && <i className="html devicon-html5-plain"></i>}
+        {usedTech("CSS") && <i className="css devicon-css3-plain"></i>}
+        {usedTech("JS") && <i className="javascript devicon-javascript-plain"></i>}
+        {usedTech("PHP") && <i className="devicon-php-plain"></i>}
+        {usedTech("React") && <i className="react devicon-react-original"></i>}
+        {usedTech("Typescript") && <i className="typescript devicon-typescript-plain"></i>}
+        {usedTech("git") && <i className="git devicon-git-plain"></i>}
+        {usedTech("Webpack") && <i className="webpack devicon-webpack-plain"></i>}
+        {usedTech("Firebase") && <i className="firebase devicon-firebase-plain"></i>}
+        {usedTech("WordPress") && <i className="wordpress devicon-wordpress-plain"></i>}
       </div>
 
       <p>{description}</p>
