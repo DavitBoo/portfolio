@@ -49,6 +49,7 @@ export default function ProjectLeft({ title, description, technologies, url }: a
         {usedTech("Webpack") && <i className="webpack devicon-webpack-plain"></i>}
         {usedTech("Firebase") && <i className="firebase devicon-firebase-plain"></i>}
         {usedTech("WordPress") && <i className="wordpress devicon-wordpress-plain"></i>}
+        {usedTech("Jest") && <i className="devicon-jest-plain"></i>}
       </div>
 
       <p>{description}</p>

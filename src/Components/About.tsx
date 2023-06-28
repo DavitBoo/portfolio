@@ -24,6 +24,21 @@ const StyledDiv = styled.div`
     display: flex;
     gap: 4rem;
     flex-wrap: wrap;
+    position: relative;
+
+    .text-box {
+      transform: scaleX(0);
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      font-family: "DM Sans", sans-serif;
+      padding: 0.3rem;
+      font-weight: 800;
+      border-radius: 4px;
+      backdrop-filter: blur(10px);
+      background-color: #ffffffb3;
+    }
 
     > * {
       position: relative;
@@ -51,6 +66,11 @@ const StyledDiv = styled.div`
       &:hover::after {
         transform: scaleX(1);
       }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
+      }
     }
 
     .firebase {
@@ -62,6 +82,11 @@ const StyledDiv = styled.div`
 
       &:hover::after {
         transform: scaleX(1);
+      }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
       }
     }
 
@@ -75,6 +100,11 @@ const StyledDiv = styled.div`
       &:hover::after {
         transform: scaleX(1);
       }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
+      }
     }
 
     .html {
@@ -86,6 +116,11 @@ const StyledDiv = styled.div`
 
       &:hover::after {
         transform: scaleX(1);
+      }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
       }
     }
 
@@ -99,6 +134,11 @@ const StyledDiv = styled.div`
       &:hover::after {
         transform: scaleX(1);
       }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
+      }
     }
 
     .react {
@@ -110,6 +150,11 @@ const StyledDiv = styled.div`
 
       &:hover::after {
         transform: scaleX(1);
+      }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
       }
     }
 
@@ -123,6 +168,11 @@ const StyledDiv = styled.div`
       &:hover::after {
         transform: scaleX(1);
       }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
+      }
     }
 
     .webpack {
@@ -135,6 +185,11 @@ const StyledDiv = styled.div`
       &:hover::after {
         transform: scaleX(1);
       }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
+      }
     }
 
     .wordpress {
@@ -146,6 +201,11 @@ const StyledDiv = styled.div`
 
       &:hover::after {
         transform: scaleX(1);
+      }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
       }
     }
   }
@@ -180,28 +240,43 @@ export default function About() {
   return (
     <StyledDiv>
       <h2>¿Cómo hago lo que que hago?</h2>
-      <p>
-        Hasta ahora he cacharreado lo suficiente como para decir que conozco:
-      </p>
+      <p>Hasta ahora he cacharreado lo suficiente como para decir que conozco:</p>
       <div className="icons">
-        <i className="css devicon-css3-plain"></i>
-        <i className="firebase devicon-firebase-plain"></i>
-        <i className="git devicon-git-plain"></i>
-        <i className="html devicon-html5-plain"></i>
-        <i className="javascript devicon-javascript-plain"></i>
-        <i className="react devicon-react-original"></i>
-        <i className="typescript devicon-typescript-plain"></i>
-        <i className="webpack devicon-webpack-plain"></i>
-        <i className="wordpress devicon-wordpress-plain"></i>
+        <i className="css devicon-css3-plain">
+          <p className="text-box">CSS3</p>
+        </i>
+        <i className="firebase devicon-firebase-plain">
+          <p className="text-box">Firebase</p>
+        </i>
+        <i className="git devicon-git-plain">
+          <p className="text-box">Git</p>
+        </i>
+        <i className="html devicon-html5-plain">
+          <p className="text-box">HTML5</p>
+        </i>
+        <i className="javascript devicon-javascript-plain">
+          <p className="text-box">JavaScript</p>
+        </i>
+        <i className="react devicon-react-original">
+          <p className="text-box">React.js</p>
+        </i>
+        <i className="typescript devicon-typescript-plain">
+          <p className="text-box">TypeScript</p>
+        </i>
+        <i className="webpack devicon-webpack-plain">
+          <p className="text-box">Webpack</p>
+        </i>
+        <i className="wordpress devicon-wordpress-plain">
+          <p className="text-box">WordPress</p>
+        </i>
       </div>
       <p>
-        Además he hecho cosas con Bootstrap, Jest.js, d3.js, Node.js,
-        Express.js, MongoDB, PHP, Woocommerce, Python, pero no me siento lo
-        suficientemente cómodo para meterlos en el saco anterior.
+        Además he hecho cosas con Bootstrap, Jest.js, d3.js, Node.js, Express.js, MongoDB, PHP, Woocommerce, Python,
+        pero no me siento lo suficientemente cómodo para meterlos en el saco anterior.
       </p>
       <p>
-        Por otro lado tengo mi cuenta de Github donde realmente se puede ver el
-        código de casi todos los proyectos que voy haciendo hasta ahora:
+        Por otro lado tengo mi cuenta de Github donde realmente se puede ver el código de casi todos los proyectos que
+        voy haciendo hasta ahora:
       </p>
       <button>
         <i className="devicon-github-original"></i> ¡Visita mi cuenta!{" "}

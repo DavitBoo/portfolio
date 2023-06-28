@@ -17,6 +17,10 @@ import deskCV from '../assets/img/cv-aplication/desktop.png'
 import deskSalburua from '../assets/img/academia-salburua/desktop.png'
 import mobileSalburua from '../assets/img/academia-salburua/mobile.png'
 
+
+import deskShips from '../assets/img/battle-ships/desktop.png'
+import mobileShips from '../assets/img/battle-ships/mobile.png'
+
 interface Project {
   title: string;
   description: string;
@@ -33,7 +37,7 @@ const projects: Project[] = [
     description: "La idea era hacer un clone de twitter que tuviese las funcionalidades principales de la red social: escribir y publicar posts, seguir a gente y que te sigan, editar tu perfil, dar al like a post de los demás... con intención poner en práctica casi todo lo aprendido hasta ahora en conjunto. Sobre la marcha se me fueron ocurriendo algunas cosas que podía añadirle, y este es el resultado.",
     desktop: desktopTwitter,
     mobile: mobilewitter,
-    technologies: ["HTML", "CSS", "JS", "React", "TypeScript", "Firebase", "Styled-Components"],
+    technologies: ["HTML", "CSS", "JS", "React", "Typescript", "Firebase", "Styled-Components"],
     url: "https://davitboo.github.io/twitter-clone/",
     responsive: true
   },
@@ -89,6 +93,15 @@ const projects: Project[] = [
     mobile: mobileSalburua,
     technologies: ["WordPress", "HTML", "CSS", "JS", "PHP"],
     url: "https://www.academiasalburua.com/",
+    responsive: true
+  },
+  {
+    title: "Juego hundir la flota",
+    description: "Juego hundir la flota, coloca tus barcos arrastrandolos en el tablero o ubicalos usando el botón de random. Juega contra el Jugador CPU.",
+    desktop: deskShips,
+    mobile: mobileShips,
+    technologies: ["HTML", "CSS", "JS", "Webpack", "Jest"],
+    url: "https://davitboo.github.io/battleship-game/",
     responsive: true
   }
 ];

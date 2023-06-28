@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent, useState } from "react";
 import Project from "./Subcomponents/Project";
 import styled from "styled-components";
 
@@ -48,9 +48,35 @@ const StyledDiv = styled.div`
   }
 `;
 
-const technologiesUsed = ["HTML", "CSS", "JS", "PHP", "React", "Typescript", "git", "Webpack", "Firebase", "WordPress"];
+const technologiesUsed = [
+  "HTML",
+  "CSS",
+  "JS",
+  "PHP",
+  "React",
+  "Typescript",
+  "Webpack",
+  "Firebase",
+  "WordPress",
+  "Jest",
+];
 
 export default function Projects() {
+  const [technologiesChecked, setTechnologiesChecked] = useState<string[]>([]);
+
+  const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const technology = event.target.name;
+    const isChecked = event.target.checked;
+
+    if (isChecked) {
+      // Marcar checkbox
+      setTechnologiesChecked((prevTechnologies) => [...prevTechnologies, technology]);
+    } else {
+      // Desmarcar checkbox
+      setTechnologiesChecked((prevTechnologies) => prevTechnologies.filter((prevTech) => prevTech !== technology));
+    }
+  };
+
   return (
     <StyledDiv>
       <h2>Algunos proyectos</h2>
@@ -64,16 +90,28 @@ export default function Projects() {
         <div className="filter">
           {technologiesUsed.map((technology) => (
             <label key={technology}>
-              <input type="checkbox" name={technology} />
+              <input
+                type="checkbox"
+                name={technology}
+                checked={technologiesChecked.includes(technology)}
+                onChange={handleCheckboxChange}
+              />
               <span>{technology}</span>
             </label>
           ))}
         </div>
       </div>
       <div className="the-projects">
-        {projects.map((project, index) => (
-          <Project key={index} project={project} />
-        ))}
+        {projects
+          .filter((project) => {
+            if (technologiesChecked.length === 0) {
+              return true; // Renderizar todos los proyectos si technologiesChecked está vacío
+            }
+            return technologiesChecked.every((tech) => project.technologies.includes(tech));
+          })
+          .map((project, index) => (
+            <Project key={index} project={project} />
+          ))}
       </div>
     </StyledDiv>
   );
