@@ -38,6 +38,7 @@ const StyledDiv = styled.div`
       border-radius: 4px;
       backdrop-filter: blur(10px);
       background-color: #ffffffb3;
+      cursor: default;
     }
 
     > * {

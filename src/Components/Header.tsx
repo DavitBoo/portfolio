@@ -44,22 +44,18 @@ export default function Header() {
           aspecto de lo usuarios que las usen.
         </h2> */}
         <p>
-          A diferencia del mundo de la ingeniería industrial (de donde vengo)
-          donde los limites muchas veces están marcados por la infraestructura y
-          las leyes físicas. El desarrollo web, en mi opinión da mucho más paso
-          a la imaginación y a la creatividad, siendo muchas veces estos los
-          limites, a diferencia de lo que pasa en el mundo industrial. Este fue
-          uno de los motivos por los que decidí centrar mi tiempo y mis ganas en
-          aprender desarrollo web y programación.
+          A diferencia del mundo de la ingeniería industrial (de donde vengo) donde los limites muchas veces están
+          marcados por la infraestructura y las leyes físicas. El desarrollo web, en mi opinión da mucho más paso a la
+          imaginación y a la creatividad, siendo muchas veces estos los limites, a diferencia de lo que pasa en el mundo
+          industrial. Este fue uno de los motivos por los que decidí centrar mi tiempo y mis ganas en aprender
+          desarrollo web y programación.
         </p>
         {/* <img src={profile} alt="" /> */}
         <p>
-          Cuando no estoy programando suelo hacer otras cosas, viajo, toco la
-          guitarra, voy al monte o a la playa, entreno calistenia, construyo
-          guitarras, aprendo idiomas, leo libros de casi cualquier tema y
-          disfruto de la compañía de otros humanos.
+          Cuando no estoy programando suelo hacer otras cosas, viajo, toco la guitarra, voy al monte o a la playa,
+          entreno calistenia, construyo guitarras, aprendo idiomas, leo libros de casi cualquier tema y disfruto de la
+          compañía de otros humanos.
         </p>
-        <button>Ir más abajo</button>
       </div>
     </StyledDiv>
   );
