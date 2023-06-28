@@ -1,7 +1,18 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import styled, { keyframes } from "styled-components";
 
 import profile from "../assets/profile.jpg";
+
+const fallAnimation = keyframes`
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 const StyledDiv = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Indie+Flower&display=swap");
@@ -33,11 +44,31 @@ const StyledDiv = styled.div`
   }
 `;
 
+const StyledLetter = styled.span`
+  display: inline-block;
+  animation: ${fallAnimation} 0.5s ease-in-out;
+  animation-fill-mode: both;
+`;
+
 export default function Header() {
+  const [letters, setLetters] = useState<string[]>([]);
+
+  useEffect(() => {
+    const name = "David Boo";
+    const lettersArray = name.split("");
+    setLetters(lettersArray);
+  }, []);
+
   return (
     <StyledDiv>
       <div className="header-content">
-        <h1 className="my-name">David Boo</h1>
+        <h1 className="my-name">
+          {letters.map((letter, index) => (
+            <StyledLetter key={index} style={{ animationDelay: `${index * 0.1}s` }}>
+              {letter}
+            </StyledLetter>
+          ))}
+        </h1>
         <h2>Desarrollador web en constante evolución</h2>
         {/* <h2>
           En proceso de desarrollar webs y herramientas que mejoren algún
