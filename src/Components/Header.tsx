@@ -7,7 +7,15 @@ const fallAnimation = keyframes`
   0% {
     transform: translateY(-100%);
     opacity: 0;
+    color: var( --color-violeta-intenso);
   }
+
+  80% {
+    transform: translateY(20%);
+    opacity: 1;
+    
+  }
+
   100% {
     transform: translateY(0);
     opacity: 1;
