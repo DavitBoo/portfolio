@@ -21,6 +21,9 @@ import mobileSalburua from '../assets/img/academia-salburua/mobile.png'
 import deskShips from '../assets/img/battle-ships/desktop.png'
 import mobileShips from '../assets/img/battle-ships/mobile.png'
 
+import deskCafe from '../assets/img/one-page-web/desktop.png'
+import mobileCafe from '../assets/img/one-page-web/mobile.png'
+
 interface Project {
   title: string;
   description: string;
@@ -101,6 +104,15 @@ const projects: Project[] = [
     desktop: deskShips,
     mobile: mobileShips,
     technologies: ["HTML", "CSS", "JS", "Webpack", "Jest"],
+    url: "https://davitboo.github.io/battleship-game/",
+    responsive: true
+  },
+  {
+    title: "Web cafetería, Vanilla.js",
+    description: "Una web que hice para jugar con el DOM, fue uno de los pasos previos a React. Cuando de verdad te das cuenta de lo útil que es disponer del state.",
+    desktop: deskCafe,
+    mobile: mobileCafe,
+    technologies: ["HTML", "CSS", "JS", "Webpack"],
     url: "https://davitboo.github.io/battleship-game/",
     responsive: true
   }

@@ -27,15 +27,15 @@ const StyledDiv = styled.div`
     margin-top: 12px; /* Ajusta el margen superior según tus necesidades */
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     position: relative; /* Agrega posición relativa para posicionar correctamente el contorno */
+
+    @media (max-width: 1000px) {
+      width: min(12vw, 80px);
+    }
   }
 
   .mobile-border {
-    width: calc(
-      100% - 4%
-    ); /* Ajusta el tamaño del contorno según tus necesidades */
-    height: calc(
-      100% - 4%
-    ); /* Ajusta el tamaño del contorno según tus necesidades */
+    width: calc(100% - 4%); /* Ajusta el tamaño del contorno según tus necesidades */
+    height: calc(100% - 4%); /* Ajusta el tamaño del contorno según tus necesidades */
     border: 1px solid #ccc;
     border-radius: 5px;
     position: absolute;

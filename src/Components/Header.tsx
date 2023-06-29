@@ -7,13 +7,11 @@ const fallAnimation = keyframes`
   0% {
     transform: translateY(-100%);
     opacity: 0;
-    color: var( --color-violeta-intenso);
   }
 
-  80% {
+  80%{
     transform: translateY(20%);
-    opacity: 1;
-    
+    color:  var(--color-violeta-intenso);
   }
 
   100% {
@@ -28,7 +26,7 @@ const StyledDiv = styled.div`
 
   .header-content {
     max-width: 980px;
-    padding-right: 25%;
+    /* padding-right: 25%; */
   }
   .my-name {
     font-family: "Indie Flower", cursive;
@@ -54,7 +52,7 @@ const StyledDiv = styled.div`
 
 const StyledLetter = styled.span`
   display: inline-block;
-  animation: ${fallAnimation} 0.5s ease-in-out;
+  animation: ${fallAnimation} 0.8s ease-in-out;
   animation-fill-mode: both;
 `;
 

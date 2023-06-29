@@ -3,13 +3,16 @@ import Header from "./Components/Header";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
 import styled from "styled-components";
+import Footer from "./Components/Footer";
 
 const StyledDiv = styled.div`
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 4rem;
+    padding: 0 5%;
   }
 `;
 
@@ -20,6 +23,7 @@ function App() {
         <Header></Header>
         <About></About>
         <Projects></Projects>
+        <Footer></Footer>
       </div>
     </StyledDiv>
   );

@@ -5,7 +5,7 @@ const StyledDiv = styled.div`
   display: flex;
   max-width: 980px;
   flex-direction: column;
-  padding-right: 25%;
+  /* padding-right: 25%; */
 
   h2 {
     font-size: 2.2rem;
@@ -217,9 +217,10 @@ const StyledDiv = styled.div`
     align-items: center;
     gap: 1rem;
     font-size: 1rem;
-    color: var(--color-blanco-puro);
-    background-color: var(--color-violeta-intenso);
-    border: none;
+    background-color: var(--color-blanco-puro);
+    color: var(--color-violeta-intenso);
+    border: 2px solid var(--color-violeta-intenso);
+
     cursor: pointer;
     border-radius: 8px;
     padding: 0.6rem;
@@ -233,6 +234,7 @@ const StyledDiv = styled.div`
 
     &:hover {
       opacity: 0.8;
+      box-shadow: 1px 1px 4px var(--color-violeta-intenso);
     }
   }
 `;

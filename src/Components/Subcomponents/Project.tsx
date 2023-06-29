@@ -5,6 +5,12 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
   display: flex;
+  flex-direction: row;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+
   /* flex-wrap: wrap; */
 `;
 
@@ -21,17 +27,11 @@ interface ProjectProps {
 }
 
 export default function Project({ project }: ProjectProps) {
-  const { title, description, desktop, mobile, technologies, url, responsive } =
-    project;
+  const { title, description, desktop, mobile, technologies, url, responsive } = project;
 
   return (
     <StyledDiv>
-      <ProjectLeft
-        title={title}
-        description={description}
-        technologies={technologies}
-        url={url}
-      />
+      <ProjectLeft title={title} description={description} technologies={technologies} url={url} />
       <ProjectRight mobile={mobile} desktop={desktop} responsive={responsive} />
     </StyledDiv>
   );

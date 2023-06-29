@@ -25,6 +25,10 @@ const StyledDiv = styled.div`
     margin: 0 auto;
     margin-top: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 1000px) {
+      width: min(50vw, 400px);
+    }
   }
 
   .browser-toolbar {
