@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
   h3 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 700;
   }
 
   .technologies {
     display: flex;
     gap: 0.5rem;
+    margin-top: 2rem;
   }
 
   i {
@@ -22,7 +23,7 @@ const StyledDiv = styled.div`
 
   a {
     color: var(--color-naranja-vibrante);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   a:hover {
@@ -38,6 +39,9 @@ export default function ProjectLeft({ title, description, technologies, url }: a
   return (
     <StyledDiv>
       <h3>{title}</h3>
+      <a className="visit-site-btn" href={url} target="_blank">
+        Ver sitio
+      </a>
       <div className="technologies">
         {usedTech("HTML") && <i className="html devicon-html5-plain"></i>}
         {usedTech("CSS") && <i className="css devicon-css3-plain"></i>}
@@ -53,9 +57,6 @@ export default function ProjectLeft({ title, description, technologies, url }: a
       </div>
 
       <p>{description}</p>
-      <a href={url} target="_blank">
-        Ver sitio
-      </a>
     </StyledDiv>
   );
 }

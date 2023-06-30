@@ -6,9 +6,12 @@ import styled from "styled-components";
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: row;
+  border: 1px solid var(--color-gris-acero);
+  padding: 2rem 0rem 2rem 2rem;
 
   @media (max-width: 1000px) {
     flex-direction: column;
+    padding: 1rem 0.5rem 1rem 0.5rem;
   }
 
   /* flex-wrap: wrap; */

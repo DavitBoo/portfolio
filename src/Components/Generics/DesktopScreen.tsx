@@ -22,6 +22,9 @@ const StyledDiv = styled.div`
       : css`
           transform: translateX(10%);
           /* animation: ${translateAnimation} 2s linear infinite alternate; */
+          @media (max-width: 1000px) {
+            transform: translateX(0%);
+          }
         `}
   .desktop {
     width: min(25vw, 400px);
