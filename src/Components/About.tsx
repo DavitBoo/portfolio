@@ -41,7 +41,7 @@ const StyledSection = styled.section`
       cursor: default;
     }
 
-    > * {
+    > label > * {
       position: relative;
 
       &::after {
@@ -245,33 +245,51 @@ export default function About() {
       <h2>¿Cómo hago lo que que hago?</h2>
       <p>Hasta ahora he cacharreado lo suficiente como para decir que conozco:</p>
       <div className="icons">
-        <i className="css devicon-css3-plain">
-          <p className="text-box">CSS3</p>
-        </i>
-        <i className="firebase devicon-firebase-plain">
-          <p className="text-box">Firebase</p>
-        </i>
-        <i className="git devicon-git-plain">
-          <p className="text-box">Git</p>
-        </i>
-        <i className="html devicon-html5-plain">
-          <p className="text-box">HTML5</p>
-        </i>
-        <i className="javascript devicon-javascript-plain">
-          <p className="text-box">JavaScript</p>
-        </i>
-        <i className="react devicon-react-original">
-          <p className="text-box">React.js</p>
-        </i>
-        <i className="typescript devicon-typescript-plain">
-          <p className="text-box">TypeScript</p>
-        </i>
-        <i className="webpack devicon-webpack-plain">
-          <p className="text-box">Webpack</p>
-        </i>
-        <i className="wordpress devicon-wordpress-plain">
-          <p className="text-box">WordPress</p>
-        </i>
+        <label htmlFor="css-icon" aria-label="CSS3">
+          <i id="css-icon" className="css devicon-css3-plain">
+            <p className="text-box">CSS3</p>
+          </i>
+        </label>
+        <label htmlFor="firebase-icon" aria-label="Firebase">
+          <i id="firebase-icon" className="firebase devicon-firebase-plain">
+            <p className="text-box">Firebase</p>
+          </i>
+        </label>
+        <label htmlFor="git-icon" aria-label="Git">
+          <i id="git-icon" className="git devicon-git-plain">
+            <p className="text-box">Git</p>
+          </i>
+        </label>
+        <label htmlFor="html-icon" aria-label="HTML5">
+          <i id="html-icon" className="html devicon-html5-plain">
+            <p className="text-box">HTML5</p>
+          </i>
+        </label>
+        <label htmlFor="javascript-icon" aria-label="JavaScript">
+          <i id="javascript-icon" className="javascript devicon-javascript-plain">
+            <p className="text-box">JavaScript</p>
+          </i>
+        </label>
+        <label htmlFor="react-icon" aria-label="React.js">
+          <i id="react-icon" className="react devicon-react-original">
+            <p className="text-box">React.js</p>
+          </i>
+        </label>
+        <label htmlFor="typescript-icon" aria-label="TypeScript">
+          <i id="typescript-icon" className="typescript devicon-typescript-plain">
+            <p className="text-box">TypeScript</p>
+          </i>
+        </label>
+        <label htmlFor="webpack-icon" aria-label="Webpack">
+          <i id="webpack-icon" className="webpack devicon-webpack-plain">
+            <p className="text-box">Webpack</p>
+          </i>
+        </label>
+        <label htmlFor="wordpress-icon" aria-label="WordPress">
+          <i id="wordpress-icon" className="wordpress devicon-wordpress-plain">
+            <p className="text-box">WordPress</p>
+          </i>
+        </label>
       </div>
       <p>
         Además he hecho cosas con Bootstrap, Jest.js, d3.js, Node.js, Express.js, MongoDB, PHP, Woocommerce, Python,
