@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
 export default function ProjectRight({ desktop, mobile, responsive }: any) {
   return (
     <StyledDiv>
-      <DesktopScreen desktop={desktop} />
+      <DesktopScreen desktop={desktop} responsive={responsive} />
       {responsive && <MobileScreen mobile={mobile} />}
     </StyledDiv>
   );

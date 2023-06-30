@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledDiv = styled.div`
+const StyledSection = styled.section`
   display: flex;
   max-width: 980px;
   flex-direction: column;
@@ -241,7 +241,7 @@ const StyledDiv = styled.div`
 
 export default function About() {
   return (
-    <StyledDiv>
+    <StyledSection>
       <h2>¿Cómo hago lo que que hago?</h2>
       <p>Hasta ahora he cacharreado lo suficiente como para decir que conozco:</p>
       <div className="icons">
@@ -284,6 +284,6 @@ export default function About() {
       <button>
         <i className="devicon-github-original"></i> ¡Visita mi cuenta!{" "}
       </button>
-    </StyledDiv>
+    </StyledSection>
   );
 }

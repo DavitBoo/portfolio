@@ -20,7 +20,7 @@ const fallAnimation = keyframes`
   }
 `;
 
-const StyledDiv = styled.div`
+const StyledHeader = styled.header`
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Indie+Flower&display=swap");
   /* height: 100vh; */
 
@@ -66,7 +66,7 @@ export default function Header() {
   }, []);
 
   return (
-    <StyledDiv>
+    <StyledHeader>
       <div className="header-content">
         <h1 className="my-name">
           {letters.map((letter, index) => (
@@ -94,6 +94,6 @@ export default function Header() {
           compañía de otros humanos.
         </p>
       </div>
-    </StyledDiv>
+    </StyledHeader>
   );
 }

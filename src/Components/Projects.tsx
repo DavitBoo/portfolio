@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import projects from "../data/projects.ts";
 
-const StyledDiv = styled.div`
+const StyledSection = styled.section`
   display: flex;
   max-width: 980px;
   flex-direction: column;
@@ -78,7 +78,7 @@ export default function Projects() {
   };
 
   return (
-    <StyledDiv>
+    <StyledSection>
       <h2>Algunos proyectos</h2>
       <p>
         En diciembre de 2022, me di cuenta que había leído muchisimo, había hecho un mogollón de tutoriales y que había
@@ -113,6 +113,6 @@ export default function Projects() {
             <Project key={index} project={project} />
           ))}
       </div>
-    </StyledDiv>
+    </StyledSection>
   );
 }

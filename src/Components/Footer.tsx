@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledDiv = styled.div`
+const StyledFooter = styled.footer`
   a {
     text-decoration: none;
     color: var(--color-naranja-vibrante);
@@ -13,9 +13,5 @@ const StyledDiv = styled.div`
 `;
 
 export default function Footer() {
-  return (
-    <StyledDiv>
-      © David Boo 2023 - <a href="mailto:davitbooweb@gmail.com">Contacto</a>{" "}
-    </StyledDiv>
-  );
+  return <StyledFooter>© David Boo 2023</StyledFooter>;
 }

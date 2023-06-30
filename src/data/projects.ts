@@ -46,7 +46,7 @@ const projects: Project[] = [
   },
   {
     title: "ToDo List",
-    description: "Una aplicación para crear listas de tareas. Si te loggeas en ella compartes la base de datos con todos los usuarios, si no utiliza el almacenamiento del navegador.",
+    description: "Una aplicación para crear listas de tareas. Si te loggeas en ella compartes la tareas con todos los usuarios, si no utiliza el almacenamiento del navegador.",
     desktop: desktopTodo,
     mobile: "",
     technologies: ["HTML", "CSS", "JS", "Firebase", "Webpack"],

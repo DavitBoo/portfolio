@@ -53,7 +53,9 @@ export default function ProjectLeft({ title, description, technologies, url }: a
       </div>
 
       <p>{description}</p>
-      <a href={url}>Ver sitio</a>
+      <a href={url} target="_blank">
+        Ver sitio
+      </a>
     </StyledDiv>
   );
 }

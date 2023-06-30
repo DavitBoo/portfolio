@@ -14,7 +14,7 @@ const rotateAnimation = keyframes`
 
 const StyledDiv = styled.div`
   transform: translateX(-400%) translateY(10%);
-  animation: ${rotateAnimation} 2s linear infinite alternate;
+  animation: ${rotateAnimation} 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite alternate;
   transform-origin: right bottom;
   .mobile {
     width: min(6vw, 80px);
@@ -64,13 +64,13 @@ const StyledDiv = styled.div`
 export default function MobileScreen({ mobile }: any) {
   return (
     <StyledDiv>
-      <div className="mobile">
+      <figure className="mobile">
         <div className="mobile-border">
           <div className="mobile-screen">
             <img src={mobile} alt="Pantalla de la aplicación" />
           </div>
         </div>
-      </div>
+      </figure>
     </StyledDiv>
   );
 }

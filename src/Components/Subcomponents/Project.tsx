@@ -32,7 +32,9 @@ export default function Project({ project }: ProjectProps) {
   return (
     <StyledDiv>
       <ProjectLeft title={title} description={description} technologies={technologies} url={url} />
-      <ProjectRight mobile={mobile} desktop={desktop} responsive={responsive} />
+      <a href={url} target="_blank">
+        <ProjectRight mobile={mobile} desktop={desktop} responsive={responsive} />
+      </a>
     </StyledDiv>
   );
 }

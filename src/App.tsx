@@ -4,6 +4,7 @@ import About from "./Components/About";
 import Projects from "./Components/Projects";
 import styled from "styled-components";
 import Footer from "./Components/Footer";
+import Contact from "./Components/Contact";
 
 const StyledDiv = styled.div`
   .container {
@@ -23,6 +24,7 @@ function App() {
         <Header></Header>
         <About></About>
         <Projects></Projects>
+        <Contact></Contact>
         <Footer></Footer>
       </div>
     </StyledDiv>

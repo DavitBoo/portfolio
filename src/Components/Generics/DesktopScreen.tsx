@@ -1,20 +1,28 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 // import desktop from "../../assets/twitter-desktop.png";
 
 const translateAnimation = keyframes`
-  from {
+  /* from {
     transform: translateX(30%);
   }
   to {
     transform: translateX(35%);
-  }
+  } */
 `;
 
 const StyledDiv = styled.div`
-  transform: translateX(30%);
-  animation: ${translateAnimation} 2s linear infinite alternate;
+  ${({ responsive }: { responsive: boolean }) =>
+    responsive
+      ? css`
+          transform: translateX(30%);
+          /* animation: ${translateAnimation} 2s linear infinite alternate; */
+        `
+      : css`
+          transform: translateX(10%);
+          /* animation: ${translateAnimation} 2s linear infinite alternate; */
+        `}
   .desktop {
     width: min(25vw, 400px);
     aspect-ratio: 16/8.6;
@@ -84,10 +92,10 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function DesktopScreen({ desktop }: any) {
+export default function DesktopScreen({ desktop, responsive }: any) {
   return (
-    <StyledDiv>
-      <div className="desktop">
+    <StyledDiv responsive={responsive}>
+      <figure className="desktop">
         <div className="browser-toolbar">
           <div className="browser-buttons">
             <div className="browser-button close"></div>
@@ -96,9 +104,9 @@ export default function DesktopScreen({ desktop }: any) {
           </div>
         </div>
         <div className="screen">
-          <img src={desktop} alt="Pantalla de la aplicación" />
+          <img src={desktop} alt="Captura de pantalla de la aplicación móvil" />
         </div>
-      </div>
+      </figure>
     </StyledDiv>
   );
 }
