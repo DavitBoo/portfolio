@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { LanguageContext } from "../Context/LanguageContext";
 
 const StyledSection = styled.section`
   display: flex;
@@ -241,10 +242,16 @@ const StyledSection = styled.section`
 `;
 
 export default function About() {
+  const { language } = useContext(LanguageContext);
+
   return (
     <StyledSection>
-      <h2>¿Cómo hago lo que que hago?</h2>
-      <p>Hasta ahora he cacharreado lo suficiente como para decir que conozco:</p>
+      <h2>{language === "es-ES" ? "¿Cómo hago lo que que hago?" : "How do I do what I do?"}</h2>
+      <p>
+        {language === "es-ES"
+          ? "Hasta ahora he cacharreado lo suficiente como para decir que conozco:"
+          : "So far I have worked enough to say that I know:"}
+      </p>
       <div className="icons">
         <label htmlFor="css-icon" aria-label="CSS3">
           <i id="css-icon" className="css devicon-css3-plain">
@@ -293,8 +300,9 @@ export default function About() {
         </label>
       </div>
       <p>
-        Además he hecho cosas con Bootstrap, Jest.js, d3.js, Node.js, Express.js, MongoDB, PHP, Woocommerce, Python,
-        pero no me siento lo suficientemente cómodo para meterlos en el saco anterior.
+        {language === "es-ES"
+          ? "Además he hecho cosas con Bootstrap, Jest.js, d3.js, Node.js, Express.js, MongoDB, PHP, Woocommerce, Python, pero no me siento lo suficientemente cómodo para meterlos en el saco anterior."
+          : "I've also done things with Bootstrap, Jest.js, d3.js, Node.js, Express.js, MongoDB, PHP, Woocommerce, Python, but I don't feel comfortable enough as I feel with the above."}
       </p>
       <p>
         Por otro lado tengo mi cuenta de Github donde realmente se puede ver el código de casi todos los proyectos que

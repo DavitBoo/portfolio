@@ -8,6 +8,7 @@ import Contact from "./Components/Contact";
 import DarkModeToggle from "./Components/Generics/DarkModeToggle";
 import { lightTheme, darkTheme } from "./Components/Themes";
 import { GlobalStyles } from "./Components/GlobalStyles";
+import { LanguageProvider } from "./Context/LanguageContext";
 
 const StyledDiv = styled.div`
   position: relative;
@@ -31,13 +32,12 @@ function App() {
   const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [darkMode, setDarkMode] = useState(prefersDarkMode);
 
+  const userLanguage = navigator.language;
+  const [language, setLanguage] = useState(userLanguage);
+
   useEffect(() => {
     console.log(prefersDarkMode);
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    // const handleChange = (event) => {
-    //   setDarkMode(event.matches);
-    // };
 
     mediaQuery.addEventListener("change", handleChange);
 
@@ -50,18 +50,33 @@ function App() {
     setDarkMode(!darkMode);
   };
 
+  // useEffect(() => {
+  //   const handleLanguageChange = () => {
+  //     const updatedLanguage = navigator.language;
+  //     setLanguage(updatedLanguage);
+  //   };
+
+  //   window.addEventListener("languagechange", handleLanguageChange);
+
+  //   return () => {
+  //     window.removeEventListener("languagechange", handleLanguageChange);
+  //   };
+  // }, []);
+
   return (
-    <ThemeProvider theme={darkMode ? lightTheme : darkTheme}>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyles></GlobalStyles>
       <StyledDiv className="App">
-        <div className="container">
-          <Header></Header>
-          <About></About>
-          <Projects></Projects>
-          <Contact></Contact>
-          <Footer></Footer>
-          <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} handleChange={handleChange} />
-        </div>
+        <LanguageProvider language={language} setLanguage={setLanguage}>
+          <div className="container">
+            <Header></Header>
+            <About></About>
+            <Projects></Projects>
+            <Contact></Contact>
+            <Footer></Footer>
+            <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} handleChange={handleChange} />
+          </div>
+        </LanguageProvider>
       </StyledDiv>
     </ThemeProvider>
   );
