@@ -40,7 +40,7 @@ const ToggleBtn = styled.div`
   }
 
   input:checked + .slider {
-    background-color: var(--color-naranja-vibrante);
+    background-color: var(--color-azul-electrico);
   }
 
   input:checked + .slider:before {
@@ -77,7 +77,7 @@ export default function DarkModeToggle({ darkMode, setDarkMode, handleChange }: 
   return (
     <ToggleBtn className="dark-mode-toggle">
       <label className="switch">
-        <input type="checkbox" onChange={handleChange()} />
+        <input type="checkbox" onChange={handleChange} />
         <span className="slider"></span>
         {/* <span className="toggle-icons">
           <i className="fa fa-sun"></i>

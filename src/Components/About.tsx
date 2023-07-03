@@ -38,6 +38,7 @@ const StyledSection = styled.section`
       border-radius: 4px;
       backdrop-filter: blur(10px);
       background-color: #ffffffb3;
+      color: #383838;
       cursor: default;
     }
 
@@ -217,7 +218,7 @@ const StyledSection = styled.section`
     align-items: center;
     gap: 1rem;
     font-size: 1rem;
-    background-color: var(--color-blanco-puro);
+    background-color: #fff;
     color: var(--color-violeta-intenso);
     border: 2px solid var(--color-violeta-intenso);
 
