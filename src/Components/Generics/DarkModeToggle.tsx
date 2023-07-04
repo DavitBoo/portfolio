@@ -49,8 +49,8 @@ const ToggleBtn = styled.div`
     background-color: #080808;
     border-radius: 50%;
     transition: all 0.4s;
-    clip-path: ellipse(50% 50% at 50% 20%);
-    transform: rotate(90deg);
+    clip-path: ellipse(50% 50% at 50% 23%);
+    transform: rotate(60deg);
   }
 
   input:checked + .slider {
