@@ -39,12 +39,32 @@ const ToggleBtn = styled.div`
     transition: 0.4s;
   }
 
+  .slider:after {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #080808;
+    border-radius: 50%;
+    transition: all 0.4s;
+    clip-path: ellipse(50% 50% at 50% 20%);
+    transform: rotate(90deg);
+  }
+
   input:checked + .slider {
     background-color: var(--color-azul-electrico);
   }
 
-  input:checked + .slider:before {
+  input:checked + .slider:before,
+  input:checked + .slider:after {
     transform: translateX(26px);
+  }
+
+  input:checked + .slider:after {
+    visibility: hidden;
+    opacity: 0;
   }
 
   .toggle-icons {
