@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 const StyledDiv = styled.div`
   h3 {
@@ -31,16 +32,18 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function ProjectLeft({ title, description, technologies, url }: any) {
+export default function ProjectLeft({ title, titleEn, description, descriptionEn, technologies, url }: any) {
   const usedTech = (usedClass: string) => {
     return technologies.some((className: string) => usedClass === className);
   };
 
+  const { language } = useContext(LanguageContext);
+
   return (
     <StyledDiv>
-      <h3>{title}</h3>
+      <h3>{language === "es-ES" ? title : titleEn}</h3>
       <a className="visit-site-btn" href={url} target="_blank">
-        Ver sitio
+        {language === "es-ES" ? "Ver sitio" : "Visite the site"}
       </a>
       <div className="technologies">
         {usedTech("HTML") && <i className="html devicon-html5-plain"></i>}
@@ -56,7 +59,7 @@ export default function ProjectLeft({ title, description, technologies, url }: a
         {usedTech("Jest") && <i className="devicon-jest-plain"></i>}
       </div>
 
-      <p>{description}</p>
+      <p>{language === "es-ES" ? description : descriptionEn}</p>
     </StyledDiv>
   );
 }

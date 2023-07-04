@@ -1,6 +1,6 @@
 export const lightTheme = {
   colorTexto: "#383838",
-  colorBg: "#fffff",
+  colorBg: "#ffffff",
   mainColor: "#2196F3",
   secondColor: "#FF5722",
 };

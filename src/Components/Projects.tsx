@@ -1,8 +1,9 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useState, useContext } from "react";
 import Project from "./Subcomponents/Project";
 import styled from "styled-components";
 
 import projects from "../data/projects.ts";
+import { LanguageContext } from "../Context/LanguageContext.tsx";
 
 const StyledSection = styled.section`
   display: flex;
@@ -64,6 +65,8 @@ const technologiesUsed = [
 export default function Projects() {
   const [technologiesChecked, setTechnologiesChecked] = useState<string[]>([]);
 
+  const { language } = useContext(LanguageContext);
+
   const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
     const technology = event.target.name;
     const isChecked = event.target.checked;
@@ -79,14 +82,16 @@ export default function Projects() {
 
   return (
     <StyledSection>
-      <h2>Algunos proyectos</h2>
+      <h2>{language === "es-ES" ? "Algunos proyectos" : "Some of the projects"}</h2>
       <p>
-        En diciembre de 2022, me di cuenta que había leído muchisimo, había hecho un mogollón de tutoriales y que había
-        trabajo en algunas empresas en las que había tocado cosas que ya estaban hechas, pero no había hecho nada desde
-        cero, así que me puse a ello.
+        {language === "es-ES"
+          ? "En diciembre de 2022, me di cuenta que había leído muchisimo, había hecho un mogollón de tutoriales y que había      trabajo en algunas empresas en las que había tocado cosas que ya estaban hechas, pero no había hecho nada desde         cero, así que me puse a ello."
+          : "In December 2022, I realized that I had read a lot, done a ton of tutorials and had worked in a few companies where I had touched things that were already done, but I hadn't done anything from scratch, so I went for it."}
       </p>
       <div>
-        <label htmlFor="">Filtra por tecnologías utilizadas:</label>
+        <label htmlFor="">
+          {language === "es-ES" ? "Filtra por tecnologías utilizadas:" : "Filter by technologies used:"}
+        </label>
         <div className="filter">
           {technologiesUsed.map((technology) => (
             <label key={technology}>

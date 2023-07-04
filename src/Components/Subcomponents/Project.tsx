@@ -20,7 +20,9 @@ const StyledDiv = styled.div`
 interface ProjectProps {
   project: {
     title: string;
+    titleEn: string;
     description: string;
+    descriptionEn: string;
     desktop: string;
     mobile: string;
     technologies: string[];
@@ -30,11 +32,18 @@ interface ProjectProps {
 }
 
 export default function Project({ project }: ProjectProps) {
-  const { title, description, desktop, mobile, technologies, url, responsive } = project;
+  const { title, titleEn, description, descriptionEn, desktop, mobile, technologies, url, responsive } = project;
 
   return (
     <StyledDiv>
-      <ProjectLeft title={title} description={description} technologies={technologies} url={url} />
+      <ProjectLeft
+        title={title}
+        titleEn={titleEn}
+        description={description}
+        descriptionEn={descriptionEn}
+        technologies={technologies}
+        url={url}
+      />
       <a href={url} target="_blank">
         <ProjectRight mobile={mobile} desktop={desktop} responsive={responsive} />
       </a>

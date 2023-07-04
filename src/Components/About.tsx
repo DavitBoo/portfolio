@@ -305,11 +305,12 @@ export default function About() {
           : "I've also done things with Bootstrap, Jest.js, d3.js, Node.js, Express.js, MongoDB, PHP, Woocommerce, Python, but I don't feel comfortable enough as I feel with the above."}
       </p>
       <p>
-        Por otro lado tengo mi cuenta de Github donde realmente se puede ver el código de casi todos los proyectos que
-        voy haciendo hasta ahora:
+        {language === "es-ES"
+          ? "Por otro lado tengo mi cuenta de Github donde realmente se puede ver el código de casi todos los proyectos que voy haciendo hasta ahora:"
+          : "On the other hand I have my Github account where you can actually see the code of almost all the projects I'm doing so far:"}
       </p>
       <button>
-        <i className="devicon-github-original"></i> ¡Visita mi cuenta!{" "}
+        <i className="devicon-github-original"></i> {language === "es-ES" ? "¡Visita mi cuenta!" : "Visit my account!"}{" "}
       </button>
     </StyledSection>
   );

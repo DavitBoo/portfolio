@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { LanguageContext } from "../Context/LanguageContext";
 
-const StyledDiv = styled.section`
+const StyledSection = styled.section`
   display: flex;
   max-width: 980px;
   flex-direction: column;
@@ -57,12 +58,15 @@ const StyledDiv = styled.section`
   }
 `;
 export default function Contact() {
+  const { language } = useContext(LanguageContext);
+
   return (
-    <StyledDiv>
-      <h2 className="contact">Contact</h2>
+    <StyledSection>
+      <h2 className="contact">{language === "es-ES" ? "Contacto" : "Contact"}</h2>
       <p>
-        Si quieres compartir algo conmigo, más información sobre mi, tienes alguna sugerencia o te interesa algo de lo
-        que hago y puedo encajar en alguno de tus proyectos o de tu empresa, puedes contactarme por aquí:
+        {language === "es-ES"
+          ? "Si quieres compartir algo conmigo, más información sobre mi, tienes alguna sugerencia o te interesa algo de lo que hago y puedo encajar en alguno de tus proyectos o de tu empresa, puedes contactarme por aquí:"
+          : "If you want to share something with me, want to know more about me, you have any suggestions or you are interested in something I do and I can fit in any of your projects or your company, you can contact me here:"}
       </p>
       <div className="contact-ways">
         <div>
@@ -81,6 +85,6 @@ export default function Contact() {
           </a>
         </div>
       </div>
-    </StyledDiv>
+    </StyledSection>
   );
 }

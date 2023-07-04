@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styled, { keyframes } from "styled-components";
 
 import profile from "../assets/profile.jpg";
+import { LanguageContext } from "../Context/LanguageContext";
 
 const fallAnimation = keyframes`
   0% {
@@ -57,8 +58,13 @@ const StyledLetter = styled.span`
 `;
 
 export default function Header() {
+  //useState
   const [letters, setLetters] = useState<string[]>([]);
 
+  //useContext
+  const { language } = useContext(LanguageContext);
+
+  //useEffect
   useEffect(() => {
     const name = "David Boo";
     const lettersArray = name.split("");
@@ -75,23 +81,23 @@ export default function Header() {
             </StyledLetter>
           ))}
         </h1>
-        <h2>Desarrollador web en constante evolución</h2>
+        <h2>
+          {language === "es-ES" ? "Desarrollador web en constante evolución" : "Web developer in constant evolution"}
+        </h2>
         {/* <h2>
           En proceso de desarrollar webs y herramientas que mejoren algún
           aspecto de lo usuarios que las usen.
         </h2> */}
         <p>
-          A diferencia del mundo de la ingeniería industrial (de donde vengo) donde los limites muchas veces están
-          marcados por la infraestructura y las leyes físicas. El desarrollo web, en mi opinión da mucho más paso a la
-          imaginación y a la creatividad, siendo muchas veces estos los limites, a diferencia de lo que pasa en el mundo
-          industrial. Este fue uno de los motivos por los que decidí centrar mi tiempo y mis ganas en aprender
-          desarrollo web y programación.
+          {language === "es-ES"
+            ? "A diferencia del mundo de la ingeniería industrial (de donde vengo) donde los limites muchas veces están marcados por la infraestructura y las leyes físicas. El desarrollo web, en mi opinión da mucho más paso a la imaginación y a la creatividad, siendo muchas veces estos los limites, a diferencia de lo que pasa en el mundo industrial. Este fue uno de los motivos por los que decidí centrar mi tiempo y mis ganas en aprender desarrollo web y programación."
+            : "Unlike the world of industrial engineering (where I come from) where the limits are often marked by infrastructure and physical laws. Web development, in my opinion, gives much more room for imagination and creativity, and these are often the limits, unlike what happens in the industrial world. This was one of the reasons why I decided to focus my time and my energy in learning web development and programming."}
         </p>
         {/* <img src={profile} alt="" /> */}
         <p>
-          Cuando no estoy programando suelo hacer otras cosas, viajo, toco la guitarra, voy al monte o a la playa,
-          entreno calistenia, construyo guitarras, aprendo idiomas, leo libros de casi cualquier tema y disfruto de la
-          compañía de otros humanos.
+          {language === "es-ES"
+            ? "Cuando no estoy programando suelo hacer otras cosas, viajo, toco la guitarra, voy al monte o a la playa, entreno calistenia, construyo guitarras, aprendo idiomas, leo libros de casi cualquier tema y disfruto de la     compañía de otros humanos."
+            : "When I'm not programming I usually do other things, I travel, play guitar, go to the mountains or the beach, train calisthenics, build guitars, learn languages, read books on almost any subject and enjoy the company of other humans."}
         </p>
       </div>
     </StyledHeader>
