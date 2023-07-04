@@ -9,6 +9,7 @@ import DarkModeToggle from "./Components/Generics/DarkModeToggle";
 import { lightTheme, darkTheme } from "./Components/Themes";
 import { GlobalStyles } from "./Components/GlobalStyles";
 import { LanguageProvider } from "./Context/LanguageContext";
+import LanguageSelector from "./Components/Generics/LanguageSelector";
 
 const StyledDiv = styled.div`
   position: relative;
@@ -24,6 +25,12 @@ const StyledDiv = styled.div`
   .dark-mode-toggle {
     position: fixed;
     top: 20px;
+    right: 20px;
+  }
+
+  .language-switcher {
+    position: fixed;
+    top: 60px;
     right: 20px;
   }
 `;
@@ -75,6 +82,7 @@ function App() {
             <Contact></Contact>
             <Footer></Footer>
             <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} handleChange={handleChange} />
+            <LanguageSelector />
           </div>
         </LanguageProvider>
       </StyledDiv>
