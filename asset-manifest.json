@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.f0317150.js",
+    "main.js": "/portfolio/static/js/main.10a5dc6e.js",
     "static/media/desktop.png": "/portfolio/static/media/desktop.210126c1ca1ad9beed65.png",
     "static/media/pokemon-desktop.png": "/portfolio/static/media/pokemon-desktop.136412f45a9d7fab9aae.png",
     "static/media/mobile.png": "/portfolio/static/media/mobile.3a8b83fc3130d0ded426.png",
@@ -9,9 +9,9 @@
     "static/media/twitter-mobile.png": "/portfolio/static/media/twitter-mobile.4da65e4918041042faa4.png",
     "static/media/todo-desktop.png": "/portfolio/static/media/todo-desktop.2a6a827b81164dc66ff4.png",
     "index.html": "/portfolio/index.html",
-    "main.f0317150.js.map": "/portfolio/static/js/main.f0317150.js.map"
+    "main.10a5dc6e.js.map": "/portfolio/static/js/main.10a5dc6e.js.map"
   },
   "entrypoints": [
-    "static/js/main.f0317150.js"
+    "static/js/main.10a5dc6e.js"
   ]
 }
