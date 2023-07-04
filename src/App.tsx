@@ -38,6 +38,7 @@ const StyledDiv = styled.div`
 function App() {
   const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [darkMode, setDarkMode] = useState(prefersDarkMode);
+  const [isScrollOver100vh, setIsScrollOver100vh] = useState(false);
 
   const userLanguage = navigator.language;
   const [language, setLanguage] = useState(userLanguage);
@@ -57,6 +58,23 @@ function App() {
     setDarkMode(!darkMode);
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > window.innerHeight) {
+      setIsScrollOver100vh(true);
+    } else {
+      setIsScrollOver100vh(false);
+    }
+  };
   // useEffect(() => {
   //   const handleLanguageChange = () => {
   //     const updatedLanguage = navigator.language;
@@ -81,8 +99,12 @@ function App() {
             <Projects></Projects>
             <Contact></Contact>
             <Footer></Footer>
-            <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} handleChange={handleChange} />
-            <LanguageSelector />
+            {!isScrollOver100vh && (
+              <>
+                <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} handleChange={handleChange} />
+                <LanguageSelector />
+              </>
+            )}
           </div>
         </LanguageProvider>
       </StyledDiv>
