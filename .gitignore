@@ -24,3 +24,4 @@ yarn-error.log*
 
 # some media files
 /src/assets/profile.jpg
+/local_images
