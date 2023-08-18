@@ -21,6 +21,15 @@ const StyledSection = styled.section`
     font-size: 3rem;
   }
 
+  a {
+    text-decoration: none;
+  }
+
+  .d-flex {
+    display: flex;
+    gap: 1rem;
+  }
+
   .icons {
     display: flex;
     gap: 4rem;
@@ -309,9 +318,19 @@ export default function About() {
           ? "Por otro lado tengo mi cuenta de Github donde realmente se puede ver el código de casi todos los proyectos que voy haciendo hasta ahora:"
           : "On the other hand I have my Github account where you can actually see the code of almost all the projects I'm doing so far:"}
       </p>
-      <button>
-        <i className="devicon-github-original"></i> {language === "es-ES" ? "¡Visita mi cuenta!" : "Visit my account!"}{" "}
-      </button>
+      <div className="d-flex">
+        <a href="https://github.com/DavitBoo/" target="_blanks">
+          <button>
+            <i className="devicon-github-original"></i>{" "}
+            {language === "es-ES" ? "¡Visita mi cuenta!" : "Visit my account!"}{" "}
+          </button>
+        </a>
+        <a href="https://codepen.io/davitboo/" target="_blanks">
+          <button>
+            <i className="devicon-codepen-plain"></i> {language === "es-ES" ? "Y mi Codepen" : "And my Codepen"}{" "}
+          </button>
+        </a>
+      </div>
     </StyledSection>
   );
 }
