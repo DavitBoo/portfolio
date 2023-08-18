@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import Icon from "@mdi/react";
-import { mdiWhiteBalanceSunny } from "@mdi/js";
+interface DarkModeToggleProps {
+  handleChange: () => void;
+}
 
 const ToggleBtn = styled.div`
   .switch {
@@ -93,7 +94,7 @@ const ToggleBtn = styled.div`
   }
 `;
 
-export default function DarkModeToggle({ darkMode, setDarkMode, handleChange }: any) {
+export default function DarkModeToggle({ handleChange }: DarkModeToggleProps) {
   return (
     <ToggleBtn className="dark-mode-toggle">
       <label className="switch">
