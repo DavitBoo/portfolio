@@ -93,7 +93,6 @@ export default function Header() {
             ? "A diferencia del mundo de la ingeniería industrial (de donde vengo) donde los limites muchas veces están marcados por la infraestructura y las leyes físicas. El desarrollo web, en mi opinión da mucho más paso a la imaginación y a la creatividad, siendo muchas veces estos los limites, a diferencia de lo que pasa en el mundo industrial. Este fue uno de los motivos por los que decidí centrar mi tiempo y mis ganas en aprender desarrollo web y programación."
             : "Unlike the world of industrial engineering (where I come from) where the limits are often marked by infrastructure and physical laws. Web development, in my opinion, gives much more room for imagination and creativity, and these are often the limits, unlike what happens in the industrial world. This was one of the reasons why I decided to focus my time and my energy in learning web development and programming."}
         </p>
-        {/* <img src={profile} alt="" /> */}
         <p>
           {language === "es-ES"
             ? "Cuando no estoy programando suelo hacer otras cosas, viajo, toco la guitarra, voy al monte o a la playa, entreno calistenia, construyo guitarras, aprendo idiomas, leo libros de casi cualquier tema y disfruto de la     compañía de otros humanos."

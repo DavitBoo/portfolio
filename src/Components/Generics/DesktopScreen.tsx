@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled, { keyframes, css } from "styled-components";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 // import desktop from "../../assets/twitter-desktop.png";
 
@@ -96,6 +97,8 @@ const StyledDiv = styled.div`
 `;
 
 export default function DesktopScreen({ desktop, responsive }: any) {
+  const { language } = useContext(LanguageContext);
+
   return (
     <StyledDiv responsive={responsive}>
       <figure className="desktop">
@@ -107,7 +110,12 @@ export default function DesktopScreen({ desktop, responsive }: any) {
           </div>
         </div>
         <div className="screen">
-          <img src={desktop} alt="Captura de pantalla de la aplicación móvil" />
+          <img
+            src={desktop}
+            alt={
+              language === "es-ES" ? "Captura de pantalla de la aplicación web" : "Screenshot of the web application"
+            }
+          />
         </div>
       </figure>
     </StyledDiv>

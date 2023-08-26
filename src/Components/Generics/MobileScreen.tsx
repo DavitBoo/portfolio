@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 // import mobile from "../../assets/twitter-mobile.png";
 
@@ -62,12 +63,21 @@ const StyledDiv = styled.div`
 `;
 
 export default function MobileScreen({ mobile }: any) {
+  const { language } = useContext(LanguageContext);
+
   return (
     <StyledDiv>
       <figure className="mobile">
         <div className="mobile-border">
           <div className="mobile-screen">
-            <img src={mobile} alt="Pantalla de la aplicación" />
+            <img
+              src={mobile}
+              alt={
+                language === "es-ES"
+                  ? "Captura de pantalla de la aplicación móvil"
+                  : "Screenshot of the mobile application"
+              }
+            />
           </div>
         </div>
       </figure>
