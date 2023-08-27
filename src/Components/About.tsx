@@ -222,7 +222,7 @@ const StyledSection = styled.section`
     }
   }
 
-  button {
+  .button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,16 +319,12 @@ export default function About() {
           : "On the other hand I have my Github account where you can actually see the code of almost all the projects I'm doing so far:"}
       </p>
       <div className="d-flex">
-        <a href="https://github.com/DavitBoo/" target="_blanks">
-          <button>
-            <i className="devicon-github-original"></i>{" "}
-            {language === "es-ES" ? "¡Visita mi cuenta!" : "Visit my account!"}{" "}
-          </button>
+        <a className="button" href="https://github.com/DavitBoo/" target="_blanks">
+          <i className="devicon-github-original"></i>{" "}
+          {language === "es-ES" ? "¡Visita mi cuenta!" : "Visit my account!"}{" "}
         </a>
-        <a href="https://codepen.io/davitboo/" target="_blanks">
-          <button>
-            <i className="devicon-codepen-plain"></i> {language === "es-ES" ? "Y mi Codepen" : "And my Codepen"}{" "}
-          </button>
+        <a className="button" href="https://codepen.io/davitboo/" target="_blanks">
+          <i className="devicon-codepen-plain"></i> {language === "es-ES" ? "Y mi Codepen" : "And my Codepen"}{" "}
         </a>
       </div>
     </StyledSection>
