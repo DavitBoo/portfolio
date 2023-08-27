@@ -100,10 +100,6 @@ export default function DarkModeToggle({ handleChange }: DarkModeToggleProps) {
       <label className="switch">
         <input type="checkbox" onChange={handleChange} />
         <span className="slider"></span>
-        {/* <span className="toggle-icons">
-          <i className="fa fa-sun"></i>
-          <i className="fa fa-moon"></i>
-        </span> */}
       </label>
     </ToggleBtn>
   );

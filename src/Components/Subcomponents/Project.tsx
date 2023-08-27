@@ -31,9 +31,9 @@ interface ProjectProps {
   };
 }
 
-export default function Project({ project }: ProjectProps) {
-  const { title, titleEn, description, descriptionEn, desktop, mobile, technologies, url, responsive } = project;
-
+export default function Project({
+  project: { title, titleEn, description, descriptionEn, desktop, mobile, technologies, url, responsive },
+}: ProjectProps) {
   return (
     <StyledDiv>
       <ProjectLeft

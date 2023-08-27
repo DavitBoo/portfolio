@@ -101,7 +101,7 @@ function App() {
             <Footer></Footer>
             {!isScrollOver100vh && (
               <>
-                <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} handleChange={handleChange} />
+                <DarkModeToggle handleChange={handleChange} />
                 <LanguageSelector />
               </>
             )}
