@@ -57,6 +57,10 @@ export default function ProjectLeft({ title, titleEn, description, descriptionEn
         {usedTech("Firebase") && <i className="firebase devicon-firebase-plain"></i>}
         {usedTech("WordPress") && <i className="wordpress devicon-wordpress-plain"></i>}
         {usedTech("Jest") && <i className="devicon-jest-plain"></i>}
+        {usedTech("nodejs") && <i className="devicon-nodejs-plain"></i>}
+        {usedTech("expressjs") && <i className="devicon-express-original"></i>}
+        {usedTech("mongodb") && <i className="devicon-mongodb-plain"></i>}
+        {usedTech("bs5") && <i className="devicon-bootstrap-plain"></i>}
       </div>
 
       <p>{language === "es-ES" ? description : descriptionEn}</p>

@@ -220,6 +220,57 @@ const StyledSection = styled.section`
         font-size: 1rem;
       }
     }
+
+    .nodejs {
+      filter: drop-shadow(0px 0px 2px var(--color-nodejs));
+
+      &::after {
+        background-color: var(--color-nodejs);
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
+      }
+    }
+
+    .expressjs {
+      filter: drop-shadow(0px 0px 2px var(--color-expressjs));
+
+      &::after {
+        background-color: var(--color-expressjs);
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
+      }
+    }
+
+    .mongodb {
+      filter: drop-shadow(0px 0px 2px var(--color-mongodb));
+
+      &::after {
+        background-color: var(--color-mongodb);
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      &:hover .text-box {
+        transform: scaleX(1) translateX(-50%);
+        font-size: 1rem;
+      }
+    }
   }
 
   .button {
@@ -307,11 +358,26 @@ export default function About() {
             <p className="text-box">WordPress</p>
           </i>
         </label>
+        <label htmlFor="nodejs-icon" aria-label="Node.js">
+          <i id="nodejs-icon" className="nodejs devicon-nodejs-plain">
+            <p className="text-box">Node.js</p>
+          </i>
+        </label>
+        <label htmlFor="expressjs-icon" aria-label="Express.js">
+          <i id="expressjs-icon" className="expressjs devicon-express-original">
+            <p className="text-box">Express.js</p>
+          </i>
+        </label>
+        <label htmlFor="mongodb-icon" aria-label="MongoDB">
+          <i id="mongodb-icon" className="mongodb devicon-mongodb-plain">
+            <p className="text-box">MongoDB</p>
+          </i>
+        </label>
       </div>
       <p>
         {language === "es-ES"
-          ? "Además he hecho cosas con Bootstrap, Jest.js, d3.js, Node.js, Express.js, MongoDB, PHP, Woocommerce, Python, pero no me siento lo suficientemente cómodo para meterlos en el saco anterior."
-          : "I've also done things with Bootstrap, Jest.js, d3.js, Node.js, Express.js, MongoDB, PHP, Woocommerce, Python, but I don't feel comfortable enough as I feel with the above."}
+          ? "Además he hecho cosas con Bootstrap, Jest.js, d3.js, template engines como Pug y EJS, PHP, Woocommerce, Python, pero no me siento lo suficientemente cómodo para meterlos en el saco anterior."
+          : "I've also done things with Bootstrap, Jest.js, d3.js, template engines like Pug and EJS, PHP, Woocommerce, Python, but I don't feel comfortable enough as I feel with the above."}
       </p>
       <p>
         {language === "es-ES"

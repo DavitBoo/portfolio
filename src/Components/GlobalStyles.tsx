@@ -61,6 +61,9 @@ p, h1, h2, h3, h4, h5, h6 {
  --color-ts: hsl(204, 100%, 40%);
  --color-webpack: hsl(206, 75%, 43%);
  --color-wordpress: hsl(0, 0%, 29%);
+ --color-nodejs: hsl(87, 67%, 48%);
+ --color-expressjs: hsl(0, 0%, 27%);
+ --color-mongodb: hsl(112, 45%, 46%);
 
 }
 

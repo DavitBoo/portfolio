@@ -52,14 +52,19 @@ const StyledSection = styled.section`
 const technologiesUsed = [
   "HTML",
   "CSS",
+  "Bootstrap",
   "JS",
-  "PHP",
   "React",
   "Typescript",
+  "nodeJS",
+  "Express",
+  "mongoDB",
+  "EJS",
   "Webpack",
-  "Firebase",
-  "WordPress",
   "Jest",
+  "Firebase",
+  "PHP",
+  "WordPress",
 ];
 
 export default function Projects() {

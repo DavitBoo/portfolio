@@ -24,6 +24,9 @@ import mobileShips from '../assets/img/battle-ships/mobile.png'
 import deskCafe from '../assets/img/one-page-web/desktop.png'
 import mobileCafe from '../assets/img/one-page-web/mobile.png'
 
+import deskInventory from '../assets/img/inventory/desktop.jpg'
+
+
 interface Project {
   title: string;
   titleEn: string;
@@ -135,6 +138,17 @@ const projects: Project[] = [
     technologies: ["HTML", "CSS", "JS", "Webpack"],
     url: "https://davitboo.github.io/battleship-game/",
     responsive: true
+  },
+  {
+    title: "Inventario de herramientas y material",
+    titleEn: "Tools and material inventory",
+    description: "La idea era hacer algo decente con node y express. Se me ocurrio hacer este pequeño gestor de inventario para ordenar el material y las herramientas que tengo y utilizo para hacer mis guitarras",
+    descriptionEn: "The idea was to do something simple but nice using node and express. I came up with this little inventory manager to organize the material and tools that I have and use to make my guitars.",
+    desktop: deskInventory,
+    mobile: '',
+    technologies: ["nodejs", "expressjs", "mongodb", "bs5"],
+    url: "https://inventory-5huj.onrender.com/",
+    responsive: false
   }
 ];
 
