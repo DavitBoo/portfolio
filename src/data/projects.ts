@@ -146,7 +146,7 @@ const projects: Project[] = [
     descriptionEn: "The idea was to do something simple but nice using node and express. I came up with this little inventory manager to organize the material and tools that I have and use to make my guitars.",
     desktop: deskInventory,
     mobile: '',
-    technologies: ["nodejs", "expressjs", "mongodb", "bs5"],
+    technologies: ["nodeJS", "Express", "mongoDB", "EJS", "Bootstrap"],
     url: "https://inventory-5huj.onrender.com/",
     responsive: false
   }
