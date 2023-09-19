@@ -136,7 +136,7 @@ const projects: Project[] = [
     desktop: deskCafe,
     mobile: mobileCafe,
     technologies: ["HTML", "CSS", "JS", "Webpack"],
-    url: "https://davitboo.github.io/battleship-game/",
+    url: "https://davitboo.github.io/cafe-webpage/",
     responsive: true
   },
   {
