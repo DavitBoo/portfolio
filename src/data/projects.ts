@@ -26,6 +26,10 @@ import mobileCafe from '../assets/img/one-page-web/mobile.png'
 
 import deskInventory from '../assets/img/inventory/desktop.jpg'
 
+import deskDashboard from '../assets/img/iceland-dashboard/desktop.jpg'
+import mobileDashboard from '../assets/img/iceland-dashboard/mobile.png'
+
+
 
 interface Project {
   title: string;
@@ -146,9 +150,20 @@ const projects: Project[] = [
     descriptionEn: "The idea was to do something simple but nice using node and express. I came up with this little inventory manager to organize the material and tools that I have and use to make my guitars.",
     desktop: deskInventory,
     mobile: '',
-    technologies: ["nodeJS", "Express", "mongoDB", "EJS", "Bootstrap"],
+    technologies: ["nodejs", "expressjs", "mongodb", "EJS", "bs5"],
     url: "https://inventory-5huj.onrender.com/",
     responsive: false
+  },
+  {
+    title: "Tablón de ideas para viaje a Islandia",
+    titleEn: "Iceland Travel Idea Board ",
+    description: "Se trata de un panel de anuncios donde colgar ideas para un viaje a Islandia que queremos hacer unos amigos. Todos pueden ver los mensajes, pero solo los miembros postear y ver quién ha escrito cada mensaje. Además tiene distintos roles de usuario, hay un administrador que puede gestionar roles y borrar cuenta y mensajes del tablón. Para ser miembro hay que registrarse y para avanzar y poder escribir en el tablón, introducir el código secreto.",
+    descriptionEn: "This is a discussion board where you can post ideas for a trip to Iceland that some friends want to do. Everyone can see the messages, but only members can post and see who has written each message. It also has different user roles, there is an administrator who can manage roles and delete account and messages from the board. To become a member you have to register and to get further and be able to write on the board, enter the secret code.",
+    desktop: deskDashboard,
+    mobile: mobileDashboard,
+    technologies: ["nodejs", "expressjs", "mongodb", "EJS", "bs5"],
+    url: "https://iceland-dashboard.onrender.com/",
+    responsive: true
   }
 ];
 
